@@ -35,3 +35,11 @@ log(countArgs(1, 2, 3, null, {}))
 
 const sumArgs = (...args) => args.reduce( (item, next) => item + next)
 log(sumArgs(1, 2, 3, 4, 5))
+
+
+/* ==========================================
+    SPREAD OPERATOR
+============================================ */
+const arr = [6, 10, 8, 12];
+const max = Math.max(...arr);
+log(max)
