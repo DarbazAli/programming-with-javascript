@@ -23,9 +23,12 @@ const calcReadTime = (numberOfPages, readPace) => {
   const time = (numberOfPages * readPace) / 7
 
   return console.log(
-    `${numberOfPages} Pages: ${Math.round(time)} minutes per day`
+    `${numberOfPages} Pages: ~${Math.round(time)} minutes per day`
   )
 }
 
 calcReadTime(720, 2.5)
+// 720 Pages: ~257 minutes per day
+
 calcReadTime(223, 2.5)
+// 223 Pages: ~80 minutes per day
