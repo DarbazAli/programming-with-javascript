@@ -1,45 +1,40 @@
-'use strict';
+'use strict'
 
-console.clear();    // clear the console everytime the script is runned
-const log = console.log;    // simplfiy console.log function
+console.clear() // clear the console everytime the script is runned
+const log = console.log // simplfiy console.log function
 
 // Anonymous Functions
-const magic = () => new Date().toUTCString();
+const magic = () => new Date().toUTCString()
 log(magic())
 
-
-// Arrow functions with Parameters 
-const doubler = item => item * 2;
+// Arrow functions with Parameters
+const doubler = (item) => item * 2
 log(doubler(2))
 
-
 // more thatn one parameter
-const multer = (item, multer) => item * multer;
-log(multer(2, 8));
-
+const multer = (item, multer) => item * multer
+log(multer(2, 8))
 
 /* ==========================================
     DEFAULT PARAMETER
 ============================================ */
 const greeting = (name = 'Anonymous') => `Hello ${name}`
 
-log(greeting('Max'))    // Hello Max
-log(greeting())         // Hello Anonymous 
-
+log(greeting('Max')) // Hello Max
+log(greeting()) // Hello Anonymous
 
 /* ==========================================
     REST Parameter ...args
 ============================================ */
-const countArgs = (...args) => `You have passed ${args.length} arguments`;
+const countArgs = (...args) => `You have passed ${args.length} arguments`
 log(countArgs(1, 2, 3, null, {}))
 
-const sumArgs = (...args) => args.reduce( (item, next) => item + next)
+const sumArgs = (...args) => args.reduce((item, next) => item + next)
 log(sumArgs(1, 2, 3, 4, 5))
-
 
 /* ==========================================
     SPREAD OPERATOR
 ============================================ */
-const arr = [6, 10, 8, 12];
-const max = Math.max(...arr);
+const arr = [6, 10, 8, 12]
+const max = Math.max(...arr)
 log(max)
