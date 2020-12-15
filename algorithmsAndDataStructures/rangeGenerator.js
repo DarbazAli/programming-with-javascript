@@ -1,3 +1,6 @@
+'use strict'
+console.clear()
+
 /* 
 Problem: Write an algorithm to generate numbers between 2 given values, star and end.
          The Generator also has to support steps
@@ -12,13 +15,20 @@ Solution:
 */
 
 const rangeGenerator = (start, end, step = 1) => {
+  if (start > end) return
+  if (start === end) return start
+
   const range = []
   for (let i = start; i <= end; i += step) {
     range.push(i)
   }
-
-  return console.log(range)
+  return range
 }
 
-rangeGenerator(0, 10)
-rangeGenerator(0, 100, 5)
+const mesureStepsTime = () => {
+  console.time('mesureSteps')
+  rangeGenerator(0, 100000000, 2)
+  console.timeEnd('mesureSteps')
+}
+
+mesureStepsTime()
