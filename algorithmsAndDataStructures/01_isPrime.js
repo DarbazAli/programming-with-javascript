@@ -10,10 +10,11 @@ division is equal to zero.
 */
 
 const isPrime_1 = (n) => {
+  console.log('isPrime_1: ', n)
   if (n <= 1) return false
 
   // check for 2 to n-1
-  for (let i = 0; i < n; i++) {
+  for (let i = 2; i < n; i++) {
     if (n % i === 0) return false
   }
 
@@ -22,9 +23,10 @@ const isPrime_1 = (n) => {
 
 // f(n) = O(n)
 
-// console.log(isPrime_1(555))
+console.log(isPrime_1(7))
 
 const isPrime_2 = (n) => {
+  console.log('isPrime_2: ', n)
   if (n <= 1) return false
   if (n <= 3) return true
 
@@ -40,3 +42,4 @@ const isPrime_2 = (n) => {
 }
 
 // f(n) = O(sqrt(n))
+console.log(isPrime_2(7))
