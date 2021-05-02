@@ -6,7 +6,7 @@ const harry = {
   salary: 90000, // prop
   riseSalary(percent) {
     // behavior or method
-    this.salary += 1 + percent / 100
+    this.salary *= 1 + percent / 100
   },
 }
 
