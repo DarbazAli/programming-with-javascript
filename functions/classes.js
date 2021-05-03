@@ -13,7 +13,15 @@ class Employee {
   }
 }
 
-const harry = new Employee('Harry Smith', 90_000)
-harry.riseSalary(10)
+// private props
+class BankAccount {
+  #balance = 0
+  deposit(amount) {
+    this.#balance += amount
+  }
+}
 
-harry
+const harryAcc = new BankAccount()
+harryAcc.deposit(20)
+
+console.log(harryAcc.balance)
