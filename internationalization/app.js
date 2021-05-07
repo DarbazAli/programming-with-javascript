@@ -70,3 +70,15 @@ const deDateFormatter = new Intl.DateTimeFormat('de', {
 })
 
 console.log(deDateFormatter.format(newYearsEve))
+
+/* 
+    4) Callation
+*/
+
+const words = ['Alpha', 'Ångström', 'Zulu', 'able', 'zebra']
+
+// sort in english alphabetci order
+console.log(words.sort((x, y) => x.localeCompare(y, 'en')))
+
+// sort in Swedish alphabetic order
+console.log(words.sort((x, y) => x.localeCompare(y, 'sv')))
