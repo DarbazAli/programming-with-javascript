@@ -50,3 +50,23 @@ const formatIraq = new Intl.NumberFormat('ar', {
 
 console.log(formatter.format(number))
 console.log(formatIraq.format(number))
+
+/* 
+    3) Formatting Date and Time objects
+*/
+
+const newYearsEve = new Date(1999, 11, 31, 23, 59)
+
+console.log(newYearsEve.toLocaleDateString('de'))
+console.log(newYearsEve.toLocaleTimeString('de'))
+
+console.log(newYearsEve.toLocaleDateString('ar'))
+console.log(newYearsEve.toLocaleTimeString('ar'))
+
+const deDateFormatter = new Intl.DateTimeFormat('de', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+})
+
+console.log(deDateFormatter.format(newYearsEve))
