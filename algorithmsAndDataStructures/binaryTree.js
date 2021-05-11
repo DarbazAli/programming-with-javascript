@@ -14,6 +14,11 @@ class Tree {
       this.root.addNode(node)
     }
   }
+
+  // Inorder Traversal
+  travers() {
+    this.root.visit()
+  }
 }
 
 /* ========================     NODE     ========================== */
@@ -25,7 +30,6 @@ class Node {
   }
 
   //   add new node
-
   addNode(node) {
     if (node.value < this.value) {
       if (this.left == null) {
@@ -41,14 +45,33 @@ class Node {
       }
     }
   }
+
+  // visit a node
+  visit() {
+    // Recursively got left
+    if (this.left != null) {
+      this.left.visit()
+    }
+
+    console.log(this.value)
+
+    // Recursively got right
+    if (this.right != null) {
+      this.right.visit()
+    }
+  }
 }
 
 // BUILD TREE
 
 const tree = new Tree()
+
+tree.addValue(1)
 tree.addValue(5)
 tree.addValue(3)
 tree.addValue(7)
 tree.addValue(6)
+
+tree.travers()
 
 console.log(tree)
